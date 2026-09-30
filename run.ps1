@@ -22,7 +22,9 @@ Write-Host "Đang build dự án (bỏ qua unit test khi khởi động nhanh)..
 & ./mvnw.cmd -B -ntp package -DskipTests
 if ($LASTEXITCODE -ne 0) { throw 'Build failed.' }
 
+$javaBin = if ($env:JAVA_HOME -and (Test-Path "$env:JAVA_HOME/bin/java.exe")) { "$env:JAVA_HOME/bin/java.exe" } else { "java" }
 Write-Host "Khởi động ứng dụng Spring Boot JWT Nimbus tại http://localhost:8005/login ..." -ForegroundColor Green
-& java -jar target/24133045_BuiThanhPhuc_JWT_Nimbus-1.0.0.jar
+& $javaBin -jar target/24133045_BuiThanhPhuc_JWT_Nimbus-1.0.0.jar
+
 
 
