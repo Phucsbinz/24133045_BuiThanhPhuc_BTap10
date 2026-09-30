@@ -1,0 +1,52 @@
+# Maven build target
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Compiled binaries
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Bảo mật thông tin nhạy cảm và biến môi trường
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.cer
+*.crt
+*.p12
+*.pfx
+*.jks
+
+# Log files
+*.log
+logs/
+
+# IDE & Editor files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+bin/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Temporary and local tool directories
+.local/
+.system_generated/
